@@ -1,0 +1,23 @@
+{
+    "name": "Energa captcha solver",
+    "description": "automatycznie odczytuje i uzupełnia pole captcha na stronie logowania do ebok.energa",
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "http://*/",
+        "https://*/"
+    ],
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://ebok.energa.pl/login.php"],
+            "js": [
+                "energa.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "captcha-solver.js"
+    ]
+}
