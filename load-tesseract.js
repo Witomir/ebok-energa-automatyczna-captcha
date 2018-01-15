@@ -1,5 +1,6 @@
 var tesseractScript = "https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js";
-var captchaSolverScriptUrl = chrome.extension.getURL("captcha-solver.js");
+var captchaSolverPgnigScriptUrl = chrome.extension.getURL("captcha-solver-pgnig.js");
+var captchaSolverEnergaScriptUrl = chrome.extension.getURL("captcha-solver-load-tesseract.js");
 
 function injectScript(src, callback){
   var script = document.createElement('script');
@@ -13,5 +14,7 @@ function injectScript(src, callback){
 }
 
 injectScript(tesseractScript, function () {
-    injectScript(captchaSolverScriptUrl);
+    window.location.host.startsWith("ebok.poog")
+        ? injectScript(captchaSolverPgnigScriptUrl)
+        : injectScript(captchaSolverEnergaScriptUrl);
 });

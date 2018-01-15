@@ -20,7 +20,7 @@ Rozszerzenie nie jest w 100% skuteczne, ale jak się pomyli, to przeładuj stron
 ale do cholery, nie jestem małpą żebym musiał wpisywać kapczę na stronie logowania.
 
 ## Jak to działa?
-Serio, to repo ma tylko 6 plików, z czego dwa interesujące...
+Serio, to repo ma tylko parę plików, z czego dwa interesujące...
 W energa.js dopinamy do strony skrypt Tesseracta, a captcha-solver odpalamy rozpoznawanie, gdy Tesseract się wczyta.
 Jest to rozbite na 2 pliki, bo solver musi być odpalony z kontekstu strony, a w energa.js nie będzie miał dostępu do globali ze strony.
 Mogłoby być dokładniej, gdyby przetrenować Tesseract na foncie Optima Bold (https://www.myfonts.com/fonts/adobe/optima/bold/specs.html)

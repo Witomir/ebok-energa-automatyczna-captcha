@@ -11,13 +11,17 @@
     "manifest_version": 2,
     "content_scripts": [
         {
-            "matches": ["https://ebok.energa.pl/login.php"],
+            "matches": [
+                "https://ebok.energa.pl/login.php",
+                "https://ebok.poog.pgnig.pl/login.php"
+            ],
             "js": [
                 "energa.js"
             ]
         }
     ],
     "web_accessible_resources": [
-        "captcha-solver.js"
+        "captcha-solver-energa.js",
+        "captcha-solver-pgnig.js"
     ]
 }
